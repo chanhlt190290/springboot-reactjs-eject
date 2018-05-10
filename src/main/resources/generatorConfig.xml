@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+    <classPathEntry
+        location="C:\Users\trungchanh\.m2\repository\mysql\mysql-connector-java\5.1.46/mysql-connector-java-5.1.46.jar" />
+    <context id="context1" targetRuntime="MyBatis3">
+        
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost/mysql?autoCommit=true&amp;useSSL=false" userId="root"
+                        password="" />
+
+        <javaModelGenerator targetPackage="com.chanhlt.eject.mybatis"
+                            targetProject="src/main/java" />
+        
+        <sqlMapGenerator targetPackage="com.chanhlt.eject.mybatis" targetProject="src/main/resources"/>
+        
+        <javaClientGenerator targetPackage="com.chanhlt.eject.mybatis" 
+                             targetProject="src/main/java" type="MIXEDMAPPER" />
+        
+        <table schema="mysql" tableName="user" domainObjectName="model.User" mapperName="mapper.UserMapper" enableSelectByPrimaryKey="true" enableDeleteByPrimaryKey="false" enableUpdateByPrimaryKey="false" enableInsert="false" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false"/>
+      
+    </context>
+</generatorConfiguration>
